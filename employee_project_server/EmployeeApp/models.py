@@ -17,11 +17,11 @@ class Departement(models.Model):
 class Employee(models.Model):
     EmployeeID = models.AutoField(primary_key=True)
     EmployeeName = models.CharField(max_length=100)
-    DepartementName = models.ForeignKey(Departement, on_delete=models.CASCADE)
+    DepartementName = models.CharField(max_length=100)
     DateOfJoining = models.DateField()
     EmployeeImage = models.CharField(max_length=100)
     
     
     def __str__(self):
         return self.EmployeeName
-    
+  
